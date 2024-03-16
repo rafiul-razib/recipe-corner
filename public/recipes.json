@@ -1,0 +1,66 @@
+[
+    {
+      "recipe_img": "https://i.ibb.co/tJ0VtW8/mike-Px-J9zk-M2wd-A-unsplash.jpg",
+      "recipe_id": 1,
+      "recipe_name": "Spaghetti Carbonara",
+      "short_description": "Classic Italian pasta dish with creamy sauce and crispy bacon.",
+      "preparing_time": "30 minutes",
+      "calories": 450,
+      "ingredients": ["Spaghetti", "Eggs", "Bacon", "Parmesan cheese", "Garlic", "Black pepper"]
+    },
+    {
+      "recipe_img": "https://i.ibb.co/R4pqrqY/ryan-concepcion-50-Kff-Xbj-IOg-unsplash.jpg",
+      "recipe_id": 2,
+      "recipe_name": "Chicken Stir-Fry",
+      "short_description": "Quick and flavorful chicken stir-fry with fresh vegetables and soy sauce.",
+      "preparing_time": "25 minutes",
+      "calories": 350,
+      "ingredients": ["Chicken breast", "Bell peppers", "Broccoli", "Onion", "Soy sauce", "Ginger"]
+    },
+    {
+      "recipe_img": "https://i.ibb.co/mRrbXVd/olayinka-babalola-r01-Zop-Ti-EV8-unsplash.jpg",
+      "recipe_id": 3,
+      "recipe_name": "Mango Salsa",
+      "short_description": "Refreshing salsa with ripe mango, tomatoes, and cilantro.",
+      "preparing_time": "15 minutes",
+      "calories": 120,
+      "ingredients": ["Mango", "Tomatoes", "Red onion", "Cilantro", "Lime juice", "Salt"]
+    },
+    {
+      "recipe_img": "https://i.ibb.co/dg2qT94/brooke-lark-j-UPOXXRNdc-A-unsplash.jpg",
+      "recipe_id": 4,
+      "recipe_name": "Vegetable Curry",
+      "short_description": "Aromatic curry with mixed vegetables simmered in coconut milk and spices.",
+      "preparing_time": "40 minutes",
+      "calories": 300,
+      "ingredients": ["Potatoes", "Carrots", "Peas", "Bell peppers", "Coconut milk", "Curry paste"]
+    },
+    {
+      "recipe_img": "https://i.ibb.co/HCPw3qV/eaters-collective-12e-HC6-Fx-Pyg-unsplash.jpg",
+      "recipe_id": 5,
+      "recipe_name": "Banana Bread",
+      "short_description": "Moist and flavorful banana bread made with ripe bananas and walnuts.",
+      "preparing_time": "60 minutes",
+      "calories": 200,
+      "ingredients": ["Ripe bananas", "Flour", "Sugar", "Eggs", "Walnuts", "Baking soda"]
+    },
+    {
+      "recipe_img": "https://i.ibb.co/RzGCQ7C/anna-pelzer-IGf-IGP5-ONV0-unsplash.jpg",
+      "recipe_id": 6,
+      "recipe_name": "Caprese Salad",
+      "short_description": "Simple and elegant salad with fresh tomatoes, mozzarella, and basil.",
+      "preparing_time": "10 minutes",
+      "calories": 180,
+      "ingredients": ["Tomatoes", "Fresh mozzarella", "Basil leaves", "Balsamic vinegar", "Olive oil", "Salt"]
+    }
+  ]
+  
+
+
+
+  
+
+
+
+
+

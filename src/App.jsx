@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import Banner from './components/Banner/Banner'
+import OurRecipe from './components/OurRecipe/OurRecipe'
 
 function App() {
   
@@ -10,10 +12,12 @@ function App() {
   },[])
 
   return (
-    <>
+    <div className='max-w-[83%] mx-auto'>
       <Navbar></Navbar>
+      <Banner></Banner>
+      <OurRecipe></OurRecipe>
       
-    </>
+    </div>
   )
 }
 
