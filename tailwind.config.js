@@ -7,6 +7,7 @@ export default {
   ],
   theme: {
     extend: {},
+    "bg-btn-green": '#0BE58A',
   },
   plugins: [daisyui],
 

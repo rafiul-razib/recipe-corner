@@ -9,9 +9,9 @@ const WantToCook = (props) => {
         <tr>
             <th>{idx+1}</th> 
             <td>{recipe_name}</td> 
-            <td>{preparing_time}</td> 
-            <td>{calories}</td> 
-            <td><button onClick={()=>handlePrepare(recipe_id)} className="btn btn-success rounded-full">Preparing</button></td> 
+            <td>{preparing_time} minutes</td> 
+            <td>{calories} calories</td> 
+            <td><button onClick={()=>handlePrepare(recipe_id)} className="btn bg-[#0BE58A] border-0 rounded-full shadow-md">Preparing</button></td> 
         </tr>
     );
 };

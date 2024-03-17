@@ -1,4 +1,5 @@
-
+import { CgProfile } from "react-icons/cg";
+import { CiSearch } from "react-icons/ci";
 const Navbar = () => {
     return (
         <div>
@@ -34,9 +35,10 @@ const Navbar = () => {
                 <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto rounded-full" />
                 </div>
                 <div className="dropdown dropdown-end">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                    <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar border-2">
+                    <div className="w-fit text-4xl">
+                    {/* <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" /> */}
+                    <CgProfile />
                     </div>
                 </div>
                 <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">

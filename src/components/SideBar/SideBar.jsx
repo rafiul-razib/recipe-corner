@@ -3,12 +3,29 @@ import Preparing from '../Preparing/Preparing';
 import WantToCook from '../WantToCook/WantToCook';
 
 const SideBar = ({wantToCook, handlePrepare, prepare}) => {
-    // console.log(wantToCook)
+    
+    // const[time, setTime] = useState(0);
+
+    let totalTime= 0;
+    let totalCalories = 0
+
+    const CalculateTotal = ()=>{
+       
+        for(const item of prepare){
+            totalTime = totalTime + item.preparing_time;
+            totalCalories = totalCalories + item.calories;
+        }
+
+        return(totalCalories, totalTime)
+    }
+
+    CalculateTotal();
     return (
-        <div>
-            <div className="preparing">
+        <div className='rounded-2xl p-4 shadow-lg'>
+            <div className="want-to-cook">
             <div className="overflow-x-auto">
-                <h1>Want to Cook:{wantToCook.length}</h1>
+                <h1 className='text-center text-xl font-bold'>Want to Cook : {wantToCook.length}</h1>
+                <div className="divider my-1"></div> 
                 <table className="table table-xs">
                     <thead>
                     <tr>
@@ -31,9 +48,10 @@ const SideBar = ({wantToCook, handlePrepare, prepare}) => {
                 </div>
             </div>
 
-            <div className="preparing">
+            <div className="preparing mt-9">
             <div className="overflow-x-auto">
-                <h1>Currently cooking:{prepare.length}</h1>
+                <h1 className='text-center text-xl font-bold'>Currently cooking : {prepare.length}</h1>
+                <div className="divider my-1"></div> 
                 <table className="table table-xs">
                     <thead>
                     <tr>
@@ -51,6 +69,16 @@ const SideBar = ({wantToCook, handlePrepare, prepare}) => {
                         }
                     
                     </tbody> 
+
+                    <tfoot>
+                        <tr>
+                            <th></th> 
+                            <th></th> 
+                            <th>Total time = {totalTime} </th> 
+                            <th>Total CAlorie = {totalCalories}</th> 
+                           
+                        </tr>
+                    </tfoot>
                     
                 </table>
                 </div>
