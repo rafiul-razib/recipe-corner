@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
 import SideBar from "../SideBar/SideBar";
+import { IoMdClose } from "react-icons/io";
 
 
 const OurRecipe = () => {
@@ -9,6 +10,10 @@ const OurRecipe = () => {
 
     const[wantToCook, setWantToCook] = useState([]);
 
+    const[prepare, setPrepare] = useState([]);
+
+
+
     useEffect(()=>{
         fetch('recipes.json')
         .then(res => res.json())
@@ -16,11 +21,39 @@ const OurRecipe = () => {
     },[])
 
     const handleWantToCook = (recipe)=>{
-        const newRecipe = [...wantToCook, recipe];
-        setWantToCook(newRecipe)
+        if(wantToCook.includes(recipe)){
+            document.getElementById('toast').classList.remove('hidden')
+        }
+        else{
+            const newRecipe = [...wantToCook, recipe];
+            setWantToCook(newRecipe)
+        }
+        
     }
 
-    console.log(wantToCook)
+    const handlePrepare = id =>{
+        
+        const remaining = wantToCook.filter(item => item.recipe_id !==id);
+        setWantToCook(remaining);
+
+        const sentToPreparation = recipes.find(item => item.recipe_id === id);
+        const allInPreparation = [...prepare, sentToPreparation];
+        
+        setPrepare(allInPreparation)
+
+        
+
+    }
+
+    // console.log(prepare)
+
+    
+
+    const hideToast = (id)=>{
+        document.getElementById(id).classList.add('hidden')
+    }
+
+    // console.log(wantToCook)
 
     return (
         <div>
@@ -40,7 +73,13 @@ const OurRecipe = () => {
                 </div>
 
                 <div className="w-full lg:w-[40%]">
-                    <SideBar></SideBar>
+                <div id="toast" className="toast toast-end toast-top hidden">
+                <div className="alert alert-success">
+                    <span>Recipe Already Added.</span>
+                    <button onClick={()=>hideToast('toast')}><IoMdClose /></button>
+                </div>
+                </div>
+                    <SideBar wantToCook={wantToCook} handlePrepare={handlePrepare} prepare={prepare}></SideBar>
                 </div>
             </div>
         </div>

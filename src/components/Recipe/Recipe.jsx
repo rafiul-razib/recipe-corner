@@ -15,6 +15,7 @@ const Recipe = (props) => {
                 <div className="divider my-1"></div> 
                 <div>
                     <h1>Ingredients : {ingredients.length}</h1>
+                    <div className="divider my-1"></div> 
                     {
                         ingredients.map((ingredient, idx) => <li key={idx} className="text-gray-500 text-sm">{ingredient}</li>)
                     }
