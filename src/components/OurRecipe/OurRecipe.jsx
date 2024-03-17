@@ -7,13 +7,20 @@ const OurRecipe = () => {
 
     const[recipes, setRecipes] = useState([]);
 
+    const[wantToCook, setWantToCook] = useState([]);
+
     useEffect(()=>{
         fetch('recipes.json')
         .then(res => res.json())
         .then(data => setRecipes(data));
     },[])
 
-    // console.log(recipes)
+    const handleWantToCook = (recipe)=>{
+        const newRecipe = [...wantToCook, recipe];
+        setWantToCook(newRecipe)
+    }
+
+    console.log(wantToCook)
 
     return (
         <div>
@@ -25,7 +32,10 @@ const OurRecipe = () => {
             <div className="flex flex-col lg:flex-row gap-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full lg:w-[60%]">
                     {
-                        recipes.map(recipe => <Recipe key={recipe.recipe_id} recipe={recipe}></Recipe>)
+                        recipes.map(recipe => <Recipe 
+                            key={recipe.recipe_id} 
+                            recipe={recipe}
+                            handleWantToCook={handleWantToCook}></Recipe>)
                     }
                 </div>
 
