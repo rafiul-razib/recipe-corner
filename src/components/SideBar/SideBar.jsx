@@ -74,8 +74,8 @@ const SideBar = ({wantToCook, handlePrepare, prepare}) => {
                         <tr>
                             <th></th> 
                             <th></th> 
-                            <th>Total time = {totalTime} </th> 
-                            <th>Total CAlorie = {totalCalories}</th> 
+                            <th>Total Time = {totalTime} </th> 
+                            <th>Total Calories = {totalCalories}</th> 
                            
                         </tr>
                     </tfoot>
