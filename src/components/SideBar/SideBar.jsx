@@ -23,7 +23,7 @@ const SideBar = ({wantToCook, handlePrepare, prepare}) => {
     return (
         <div className='rounded-2xl p-4 shadow-lg'>
             <div className="want-to-cook">
-            <div className="overflow-x-auto">
+            <div className="overflow-x-scroll">
                 <h1 className='text-center text-xl font-bold'>Want to Cook : {wantToCook.length}</h1>
                 <div className="divider my-1"></div> 
                 <table className="table table-xs">
